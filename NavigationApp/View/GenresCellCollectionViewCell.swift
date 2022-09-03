@@ -9,5 +9,7 @@ import UIKit
 
 class GenresCellCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var genreImage: UIImageView!
+    @IBOutlet var genreLabel: UILabel!
     
 }
