@@ -12,6 +12,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet var cardView: UIView!
     @IBOutlet var genresCollectionView: UICollectionView!
     
+    var selectedGenre: Genre?
+    
     let movieDataManager = MovieDataManager()
     let genreDataManager = GenreDataManager()
     let defaultGenre = "Comedy"
@@ -36,6 +38,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.genreImage.image = UIImage.init(named: genre.genre)
         cell.genreLabel.text = genre.genre
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedGenre = genreDataManager.genreAt(index: indexPath.row)
+        self.performSegue(withIdentifier: "detailSegue", sender: Self.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! DetailViewController
+        destination.receivedGenre = selectedGenre
     }
     
 

@@ -10,17 +10,18 @@ import Foundation
 class MovieDataManager {
     private var movies: [Movie] = []
     
-    func fetch(genre: String) {
+    func fetch(genre: String) -> [Movie] {
         if let file = Bundle.main.url(forResource: "movies", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: file)
                 let decodedMovies = try JSONDecoder().decode([Movie].self, from: data)
                 movies = decodedMovies.filter({$0.genres.contains(genre)})
-                print("movies ->", movies)
+                // print("movies ->", movies)
             } catch {
                 print("Error", error)
             }
         }
+        return movies
     }
     
     func movieCount() -> Int {
