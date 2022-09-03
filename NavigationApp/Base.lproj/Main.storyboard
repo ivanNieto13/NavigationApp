@@ -20,7 +20,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="yBl-zQ-rLf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="855"/>
                             </imageView>
-                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mel-1F-oAs">
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mel-1F-oAs" userLabel="Card View" customClass="CustomUIView" customModule="NavigationApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="140" width="374" height="385"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="JPx-jl-SOh">
@@ -45,6 +45,20 @@
                                     <constraint firstAttribute="trailing" secondItem="JPx-jl-SOh" secondAttribute="trailing" id="tMG-Ed-c4q"/>
                                     <constraint firstItem="Yoa-ak-Qhc" firstAttribute="top" secondItem="JPx-jl-SOh" secondAttribute="bottom" constant="8" symbolic="YES" id="ufX-ND-zTy"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffset">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-Yb-CRs">
                                 <rect key="frame" x="289" y="639" width="93" height="31"/>
@@ -73,6 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="x4N-JH-Dmn"/>
                     <connections>
+                        <outlet property="cardView" destination="mel-1F-oAs" id="IAz-X2-Ovg"/>
                         <segue destination="pvw-X8-rFO" kind="show" identifier="detailSegue" id="mN1-GI-bsZ"/>
                     </connections>
                 </viewController>
@@ -99,17 +114,36 @@
                                     <action selector="viewMoreButton:" destination="pvw-X8-rFO" eventType="touchUpInside" id="bhi-p4-xiD"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-LH-egf">
+                                <rect key="frame" x="16" y="140" width="382" height="200"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" alpha="0.25" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irO-zX-deS">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ikb-LB-Ft9">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="systemUltraThinMaterial"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" name="BackAlpha"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WzF-Rd-KG9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="0Lb-IZ-YKx" secondAttribute="trailing" id="4YG-av-Bhh"/>
                             <constraint firstItem="0Lb-IZ-YKx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="shu-lL-EyH" secondAttribute="leading" constant="20" symbolic="YES" id="71l-vV-75D"/>
+                            <constraint firstItem="e5j-LH-egf" firstAttribute="leading" secondItem="WzF-Rd-KG9" secondAttribute="leading" constant="16" id="BD1-HH-APK"/>
                             <constraint firstAttribute="trailing" secondItem="BNa-w3-lsV" secondAttribute="trailing" id="CBr-FC-dDb"/>
                             <constraint firstItem="0Lb-IZ-YKx" firstAttribute="top" secondItem="WzF-Rd-KG9" secondAttribute="top" constant="491" id="DMl-a6-aSc"/>
+                            <constraint firstAttribute="bottom" secondItem="e5j-LH-egf" secondAttribute="bottom" constant="556" id="N7w-aA-1H9"/>
                             <constraint firstItem="BNa-w3-lsV" firstAttribute="top" secondItem="shu-lL-EyH" secondAttribute="top" id="UuS-BV-UgQ"/>
                             <constraint firstItem="BNa-w3-lsV" firstAttribute="bottom" secondItem="WzF-Rd-KG9" secondAttribute="bottom" constant="41" id="b9J-dC-uB5"/>
                             <constraint firstItem="BNa-w3-lsV" firstAttribute="leading" secondItem="shu-lL-EyH" secondAttribute="leading" id="fRU-5h-YSH"/>
+                            <constraint firstItem="e5j-LH-egf" firstAttribute="top" secondItem="WzF-Rd-KG9" secondAttribute="top" id="vd4-Ap-rRI"/>
+                            <constraint firstItem="WzF-Rd-KG9" firstAttribute="trailing" secondItem="e5j-LH-egf" secondAttribute="trailing" constant="16" id="zsW-4K-b6w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="bat-ds-cEO"/>
@@ -119,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhu-Nl-pTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2831.1999999999998" y="69.715142428785612"/>
+            <point key="canvasLocation" x="2830.434782608696" y="69.642857142857139"/>
         </scene>
         <!--View detail-->
         <scene sceneID="Wob-zL-LXo">
@@ -245,6 +279,7 @@
                 <tabBarController title="Tab Bar" automaticallyAdjustsScrollViewInsets="NO" id="qlM-iH-XUi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CpM-zg-nsI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -265,6 +300,9 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="star.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="BackAlpha">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="VCButtonColor">
             <color red="0.76899999380111694" green="0.84299999475479126" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

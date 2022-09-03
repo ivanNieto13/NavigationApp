@@ -9,10 +9,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var cardView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func viewDetailButton(_ sender: UIButton) {
