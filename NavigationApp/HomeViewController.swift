@@ -10,10 +10,14 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet var cardView: UIView!
+    let movieDataManager = MovieDataManager()
+    let genreDataManager = GenreDataManager()
+    let defaultGenre = "Comedy"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // movieDataManager.fetch(genre: defaultGenre)
+        // genreDataManager.fetch()
     }
     
     @IBAction func viewDetailButton(_ sender: UIButton) {
