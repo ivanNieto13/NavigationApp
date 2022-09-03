@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet var cardView: UIView!
+    @IBOutlet var genresCollectionView: UICollectionView!
+    
     let movieDataManager = MovieDataManager()
     let genreDataManager = GenreDataManager()
     let defaultGenre = "Comedy"
