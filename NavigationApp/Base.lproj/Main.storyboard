@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qlM-iH-XUi">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,11 +14,40 @@
             <objects>
                 <viewController title="Home" id="BYZ-38-t0r" customClass="HomeViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="yBl-zQ-rLf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="855"/>
+                            </imageView>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mel-1F-oAs">
+                                <rect key="frame" x="20" y="140" width="374" height="385"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="JPx-jl-SOh">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="334"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-ak-Qhc">
+                                        <rect key="frame" x="155" y="342" width="64" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Yoa-ak-Qhc" firstAttribute="centerX" secondItem="JPx-jl-SOh" secondAttribute="centerX" id="4dh-Le-RLo"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yoa-ak-Qhc" secondAttribute="trailing" id="8Wf-Ce-iqb"/>
+                                    <constraint firstItem="Yoa-ak-Qhc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mel-1F-oAs" secondAttribute="leading" id="bY2-0d-Lbg"/>
+                                    <constraint firstItem="JPx-jl-SOh" firstAttribute="leading" secondItem="mel-1F-oAs" secondAttribute="leading" id="frF-Hd-veh"/>
+                                    <constraint firstAttribute="bottom" secondItem="JPx-jl-SOh" secondAttribute="bottom" constant="51" id="nqs-h2-7fu"/>
+                                    <constraint firstItem="JPx-jl-SOh" firstAttribute="top" secondItem="mel-1F-oAs" secondAttribute="top" id="oci-BV-MRX"/>
+                                    <constraint firstAttribute="trailing" secondItem="JPx-jl-SOh" secondAttribute="trailing" id="tMG-Ed-c4q"/>
+                                    <constraint firstItem="Yoa-ak-Qhc" firstAttribute="top" secondItem="JPx-jl-SOh" secondAttribute="bottom" constant="8" symbolic="YES" id="ufX-ND-zTy"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-Yb-CRs">
-                                <rect key="frame" x="250" y="595" width="93" height="31"/>
+                                <rect key="frame" x="289" y="639" width="93" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ver detalle"/>
                                 <connections>
@@ -29,9 +58,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mel-1F-oAs" secondAttribute="bottom" constant="371" id="6My-Mf-2um"/>
+                            <constraint firstItem="yBl-zQ-rLf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8lm-FU-V86"/>
+                            <constraint firstItem="yBl-zQ-rLf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hvn-bR-7No"/>
                             <constraint firstItem="eKF-Yb-CRs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="499" id="S3H-vA-bYj"/>
+                            <constraint firstItem="yBl-zQ-rLf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VOv-k3-JzN"/>
+                            <constraint firstAttribute="bottom" secondItem="yBl-zQ-rLf" secondAttribute="bottom" constant="41" id="gnq-49-1y3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eKF-Yb-CRs" secondAttribute="trailing" constant="32" id="nvg-Zw-oK2"/>
+                            <constraint firstItem="mel-1F-oAs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qLQ-p4-Sxv"/>
+                            <constraint firstItem="mel-1F-oAs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uY1-Sf-ZQF"/>
                             <constraint firstItem="eKF-Yb-CRs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vRT-ww-98w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mel-1F-oAs" secondAttribute="trailing" constant="20" id="xa6-9h-Ypz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="x4N-JH-Dmn"/>
@@ -48,11 +85,14 @@
             <objects>
                 <viewController title="Detail" id="pvw-X8-rFO" customClass="DetailViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="shu-lL-EyH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="BNa-w3-lsV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="854"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lb-IZ-YKx">
-                                <rect key="frame" x="287" y="616" width="77" height="31"/>
+                                <rect key="frame" x="317.5" y="631" width="76.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ver más"/>
                                 <connections>
@@ -63,9 +103,13 @@
                         <viewLayoutGuide key="safeArea" id="WzF-Rd-KG9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Lb-IZ-YKx" secondAttribute="trailing" constant="-5" id="4YG-av-Bhh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Lb-IZ-YKx" secondAttribute="trailing" id="4YG-av-Bhh"/>
                             <constraint firstItem="0Lb-IZ-YKx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="shu-lL-EyH" secondAttribute="leading" constant="20" symbolic="YES" id="71l-vV-75D"/>
-                            <constraint firstItem="0Lb-IZ-YKx" firstAttribute="top" secondItem="WzF-Rd-KG9" secondAttribute="top" constant="520" id="DMl-a6-aSc"/>
+                            <constraint firstAttribute="trailing" secondItem="BNa-w3-lsV" secondAttribute="trailing" id="CBr-FC-dDb"/>
+                            <constraint firstItem="0Lb-IZ-YKx" firstAttribute="top" secondItem="WzF-Rd-KG9" secondAttribute="top" constant="491" id="DMl-a6-aSc"/>
+                            <constraint firstItem="BNa-w3-lsV" firstAttribute="top" secondItem="shu-lL-EyH" secondAttribute="top" id="UuS-BV-UgQ"/>
+                            <constraint firstItem="BNa-w3-lsV" firstAttribute="bottom" secondItem="WzF-Rd-KG9" secondAttribute="bottom" constant="41" id="b9J-dC-uB5"/>
+                            <constraint firstItem="BNa-w3-lsV" firstAttribute="leading" secondItem="shu-lL-EyH" secondAttribute="leading" id="fRU-5h-YSH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="bat-ds-cEO"/>
@@ -82,10 +126,21 @@
             <objects>
                 <viewController title="View detail" id="79u-cF-aaj" customClass="ViewMoreViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="62m-Mt-ESY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kbM-Vu-h3y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sHo-Bz-fUy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kbM-Vu-h3y" secondAttribute="trailing" id="0AS-0i-l4z"/>
+                            <constraint firstItem="kbM-Vu-h3y" firstAttribute="top" secondItem="62m-Mt-ESY" secondAttribute="top" id="Yu6-MJ-rYB"/>
+                            <constraint firstAttribute="bottom" secondItem="kbM-Vu-h3y" secondAttribute="bottom" id="eyW-Il-MTs"/>
+                            <constraint firstItem="kbM-Vu-h3y" firstAttribute="leading" secondItem="62m-Mt-ESY" secondAttribute="leading" id="sWO-gQ-9bb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="View more" id="DKc-PN-cUX"/>
                 </viewController>
@@ -100,7 +155,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="bej-uQ-wKe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BxA-bq-Wer">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
@@ -118,11 +173,11 @@
             <objects>
                 <viewController id="ayt-uc-o84" customClass="FavoritesViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="csl-rj-XIP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x0u-Gy-2nH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Hhc-je-NbS" appends="YES" id="zdA-Mz-apu"/>
@@ -130,7 +185,7 @@
                                 </connections>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="1" translatesAutoresizingMaskIntoConstraints="NO" id="RkR-35-EiK">
-                                <rect key="frame" x="112.5" y="592" width="150" height="26"/>
+                                <rect key="frame" x="112.5" y="787" width="189" height="26"/>
                                 <connections>
                                     <action selector="posterPageControlAction:" destination="ayt-uc-o84" eventType="valueChanged" id="RGY-7I-4vd"/>
                                 </connections>
@@ -173,7 +228,7 @@
             <objects>
                 <viewController id="M4o-z6-VJS" customClass="HelpViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6H1-ec-0Sr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="zcr-VO-qSq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -205,6 +260,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="660" height="984"/>
+        <image name="card" width="350" height="200"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="star.circle.fill" catalog="system" width="128" height="121"/>
