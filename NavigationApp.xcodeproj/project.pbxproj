@@ -11,8 +11,13 @@
 		7B04E92328C2AD1400ABE217 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04E92228C2AD1400ABE217 /* SceneDelegate.swift */; };
 		7B04E92528C2AD1400ABE217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04E92428C2AD1400ABE217 /* ViewController.swift */; };
 		7B04E92828C2AD1400ABE217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B04E92628C2AD1400ABE217 /* Main.storyboard */; };
-		7B04E92A28C2AD1600ABE217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B04E92928C2AD1600ABE217 /* Assets.xcassets */; };
 		7B04E92D28C2AD1600ABE217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B04E92B28C2AD1600ABE217 /* LaunchScreen.storyboard */; };
+		7B04E93528C2AE3700ABE217 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B04E93428C2AE3700ABE217 /* HomeViewController.swift */; };
+		7B5478D728C2B2F5001FAF7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5478D628C2B2F5001FAF7A /* DetailViewController.swift */; };
+		7B5478D928C2B3E4001FAF7A /* ViewMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5478D828C2B3E4001FAF7A /* ViewMoreViewController.swift */; };
+		7B5478DB28C2BD7A001FAF7A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5478DA28C2BD7A001FAF7A /* FavoritesViewController.swift */; };
+		7B5478DD28C2BDE5001FAF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5478DC28C2BDE5001FAF7A /* Assets.xcassets */; };
+		7B5478DF28C2BE07001FAF7A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5478DE28C2BE07001FAF7A /* HelpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +26,14 @@
 		7B04E92228C2AD1400ABE217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7B04E92428C2AD1400ABE217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B04E92728C2AD1400ABE217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7B04E92928C2AD1600ABE217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B04E92C28C2AD1600ABE217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B04E92E28C2AD1600ABE217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B04E93428C2AE3700ABE217 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7B5478D628C2B2F5001FAF7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7B5478D828C2B3E4001FAF7A /* ViewMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoreViewController.swift; sourceTree = "<group>"; };
+		7B5478DA28C2BD7A001FAF7A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		7B5478DC28C2BDE5001FAF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
+		7B5478DE28C2BE07001FAF7A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,7 @@
 		7B04E91428C2AD1400ABE217 = {
 			isa = PBXGroup;
 			children = (
+				7B5478DE28C2BE07001FAF7A /* HelpViewController.swift */,
 				7B04E91F28C2AD1400ABE217 /* NavigationApp */,
 				7B04E91E28C2AD1400ABE217 /* Products */,
 			);
@@ -60,9 +71,13 @@
 				7B04E92228C2AD1400ABE217 /* SceneDelegate.swift */,
 				7B04E92428C2AD1400ABE217 /* ViewController.swift */,
 				7B04E92628C2AD1400ABE217 /* Main.storyboard */,
-				7B04E92928C2AD1600ABE217 /* Assets.xcassets */,
 				7B04E92B28C2AD1600ABE217 /* LaunchScreen.storyboard */,
 				7B04E92E28C2AD1600ABE217 /* Info.plist */,
+				7B04E93428C2AE3700ABE217 /* HomeViewController.swift */,
+				7B5478D628C2B2F5001FAF7A /* DetailViewController.swift */,
+				7B5478D828C2B3E4001FAF7A /* ViewMoreViewController.swift */,
+				7B5478DA28C2BD7A001FAF7A /* FavoritesViewController.swift */,
+				7B5478DC28C2BDE5001FAF7A /* Assets.xcassets */,
 			);
 			path = NavigationApp;
 			sourceTree = "<group>";
@@ -126,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B04E92D28C2AD1600ABE217 /* LaunchScreen.storyboard in Resources */,
-				7B04E92A28C2AD1600ABE217 /* Assets.xcassets in Resources */,
+				7B5478DD28C2BDE5001FAF7A /* Assets.xcassets in Resources */,
 				7B04E92828C2AD1400ABE217 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5478D928C2B3E4001FAF7A /* ViewMoreViewController.swift in Sources */,
 				7B04E92528C2AD1400ABE217 /* ViewController.swift in Sources */,
+				7B5478DB28C2BD7A001FAF7A /* FavoritesViewController.swift in Sources */,
+				7B5478DF28C2BE07001FAF7A /* HelpViewController.swift in Sources */,
 				7B04E92128C2AD1400ABE217 /* AppDelegate.swift in Sources */,
+				7B5478D728C2B2F5001FAF7A /* DetailViewController.swift in Sources */,
 				7B04E92328C2AD1400ABE217 /* SceneDelegate.swift in Sources */,
+				7B04E93528C2AE3700ABE217 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +324,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +352,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
