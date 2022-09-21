@@ -11,6 +11,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var receivedGenre: Genre?
     var movies: [Movie] = []
+    var selectedMovie: Movie?
     
     @IBOutlet var moviesTable: UITableView!
     let movieDataManager = MovieDataManager()
@@ -22,9 +23,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let _genre = receivedGenre?.genre
         movies = movieDataManager.fetch(genre: _genre ?? "")
-    }
-    @IBAction func viewMoreButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "viewMoreSegue", sender: Self.self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +36,15 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMovie = movieDataManager.movieAt(index: indexPath.row)
+        self.performSegue(withIdentifier: "viewMoreSegue", sender: Self.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! ViewMoreViewController
+        destination.receivedMovie = selectedMovie
+    }
     
  
 }

@@ -8,10 +8,10 @@
 import UIKit
 
 class ViewMoreViewController: UIViewController {
+    var receivedMovie: Movie?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
