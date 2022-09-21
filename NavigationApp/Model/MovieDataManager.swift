@@ -16,7 +16,7 @@ class MovieDataManager {
                 let data = try Data(contentsOf: file)
                 let decodedMovies = try JSONDecoder().decode([Movie].self, from: data)
                 movies = decodedMovies.filter({$0.genres.contains(genre)})
-                // print("movies ->", movies)
+                print("list movies ->", movies)
             } catch {
                 print("Error", error)
             }
