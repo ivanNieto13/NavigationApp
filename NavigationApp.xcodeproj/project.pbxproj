@@ -20,6 +20,7 @@
 		7B3817CE28C3BD9C008B3750 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B3817CC28C3BD9C008B3750 /* movies.json */; };
 		7B3817CF28C3BD9C008B3750 /* genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B3817CD28C3BD9C008B3750 /* genres.json */; };
 		7B3817D228C3C913008B3750 /* GenresCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3817D128C3C913008B3750 /* GenresCellCollectionViewCell.swift */; };
+		7B4C9AF828DD63B500AE96C9 /* MovieDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C9AF728DD63B500AE96C9 /* MovieDetailTableViewCell.swift */; };
 		7B5478D728C2B2F5001FAF7A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5478D628C2B2F5001FAF7A /* DetailViewController.swift */; };
 		7B5478D928C2B3E4001FAF7A /* ViewMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5478D828C2B3E4001FAF7A /* ViewMoreViewController.swift */; };
 		7B5478DB28C2BD7A001FAF7A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5478DA28C2BD7A001FAF7A /* FavoritesViewController.swift */; };
@@ -46,6 +47,7 @@
 		7B3817CC28C3BD9C008B3750 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = movies.json; path = ../../../../../Downloads/Data/movies.json; sourceTree = "<group>"; };
 		7B3817CD28C3BD9C008B3750 /* genres.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = genres.json; path = ../../../../../Downloads/Data/genres.json; sourceTree = "<group>"; };
 		7B3817D128C3C913008B3750 /* GenresCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B4C9AF728DD63B500AE96C9 /* MovieDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewCell.swift; sourceTree = "<group>"; };
 		7B5478D628C2B2F5001FAF7A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7B5478D828C2B3E4001FAF7A /* ViewMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMoreViewController.swift; sourceTree = "<group>"; };
 		7B5478DA28C2BD7A001FAF7A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				7B3817D128C3C913008B3750 /* GenresCellCollectionViewCell.swift */,
 				7BE2549928DAA89800A9AF4C /* MovieTableViewCell.swift */,
+				7B4C9AF728DD63B500AE96C9 /* MovieDetailTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				7BB3E4A028C39E8600AA07C7 /* CustomUIView.swift in Sources */,
 				7BB3E49F28C39E8600AA07C7 /* CustomImageView.swift in Sources */,
 				7B3817CA28C3BBB5008B3750 /* GenreDataManager.swift in Sources */,
+				7B4C9AF828DD63B500AE96C9 /* MovieDetailTableViewCell.swift in Sources */,
 				7B04E92528C2AD1400ABE217 /* ViewController.swift in Sources */,
 				7B5478DB28C2BD7A001FAF7A /* FavoritesViewController.swift in Sources */,
 				7B5478DF28C2BE07001FAF7A /* HelpViewController.swift in Sources */,

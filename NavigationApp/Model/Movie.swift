@@ -30,4 +30,20 @@ struct Movie: Decodable {
         case posterUrl = "poster_url"
     }
     
+    func valueByPropertyName(name:String) -> Any {
+            switch name {
+            case "title": return title
+            case "year": return year
+            case "runtime": return runtime
+            case "genres": return formatGenres()
+            case "director": return director
+            case "actors": return actors
+            case "plot": return plot
+            default: fatalError("Wrong property name")
+            }
+    }
+    
+    func formatGenres() -> String {
+        return genres.joined(separator: ", ")
+    }
 }
