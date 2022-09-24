@@ -10,14 +10,19 @@ import UIKit
 class FavoritesViewController: UIViewController {
     
     let posters = ["0", "1", "2", "3", "4"]
+    var movies: [Movie] = []
+    let movieDataManager = MovieDataManager()
     
     @IBOutlet var favoritePosterImage: UIImageView!
+    @IBOutlet var favoriteMovieLabel: UILabel!
     @IBOutlet var posterPageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        movies = movieDataManager.getFavorites()
         posterPageControl.numberOfPages = posters.count
         favoritePosterImage.image = UIImage(named: posters[0])
+        favoriteMovieLabel.text = movies[0].title
     }
     
     
@@ -32,6 +37,7 @@ class FavoritesViewController: UIViewController {
             posterPageControl.currentPage = posterPageControl.currentPage - 1
         }
         changePoster()
+        changeMovieTitle()
     }
     
     @IBAction func leftSwipeDone(_ sender: Any) {
@@ -41,10 +47,15 @@ class FavoritesViewController: UIViewController {
             posterPageControl.currentPage = posterPageControl.currentPage + 1
         }
         changePoster()
+        changeMovieTitle()
     }
     
     func changePoster() {
         favoritePosterImage.image = UIImage(named: posters[posterPageControl.currentPage])
+    }
+    
+    func changeMovieTitle() {
+        favoriteMovieLabel.text = movies[posterPageControl.currentPage].title
     }
     
 }

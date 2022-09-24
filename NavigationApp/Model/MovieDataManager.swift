@@ -23,6 +23,14 @@ class MovieDataManager {
         return movies
     }
     
+    func getFavorites() -> [Movie] {
+        let movies = ["Ex Machina", "Hellboy II", "Inception", "Pacific Rim", "Requiem For A Dream"]
+        let formattedMovies = movies.map { (title) -> Movie in
+            return Movie.init(id: 1, title: title, year: "", runtime: "", genres: [""], director: "", actors: "", plot: "", posterUrl: "")
+        }
+        return formattedMovies
+    }
+    
     func movieCount() -> Int {
         return movies.count
     }
